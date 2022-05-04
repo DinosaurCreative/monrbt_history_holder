@@ -1,10 +1,13 @@
 const express = require('express');
 const mongoose = require('mongoose');
+var cors = require('cors')
+const {dataBaseAdress} = require('./utils/config');
+
 const { PORT = 3001 } = process.env;
 
 const app = express();
+app.use(cors());
 const router = require('./routes/remindersHistory');
-const {dataBaseAdress} = require('./utils/config');
 
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
