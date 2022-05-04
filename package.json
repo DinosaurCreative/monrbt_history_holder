@@ -2,13 +2,13 @@
   "name": "mnrbot_api",
   "version": "1.0.0",
   "description": "api 4 testing",
-  "main": "index.js",
+  "main": "apps.js",
   "engines": {
     "node": "14.x"
   },
   "scripts": {
-    "dev": "nodemon index.js", 
-    "start": "node index.js"
+    "dev": "nodemon apps.js", 
+    "start": "node apps.js"
   },
   "author": "ME",
   "license": "ISC",
