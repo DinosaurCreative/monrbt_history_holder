@@ -4,7 +4,7 @@ module.exports.getHistory = (req, res) => {
   
   RemindersHistory.find({})
     .then(() => Object.keys(req))
-    .then(rsp => res.send(rsp))
+    .then(rsp => res.send(req.params))
     .catch(() => res.status(500).send('Ошибка на серваке'))
 }
 
