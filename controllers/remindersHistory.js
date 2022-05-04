@@ -1,8 +1,9 @@
 const RemindersHistory = require('../models/remindersHistory');
 
 module.exports.getHistory = (req, res) => {
+  
   RemindersHistory.find({})
-    .then(history => res.send('suck my balls'))
+    .then(history => res.send(Object.isObject(req)))
     .catch(() => res.status(500).send('Ошибка на серваке'))
 }
 
