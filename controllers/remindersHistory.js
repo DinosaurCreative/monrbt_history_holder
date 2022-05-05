@@ -7,11 +7,11 @@ module.exports.getHistory = (req, res) => {
 }
 
 module.exports.postAction = (req, res) => {
-  const response = Object.keys(req);
+  const { params, query, res, body, _body } = Object.keys(req);
   RemindersHistory.create({
     actionType: 'pause',
     reminderId: 13,
   })
-  .then((r) => res.send(response))
+  .then((r) => res.send({ params, query, res, body, _body }))
   .catch(() => res.status(500).send('Ошибка при добавления истории экшона'))
 }
