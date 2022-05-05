@@ -11,6 +11,7 @@ const remindersHistorySchema = new mongoose.Schema({
     default: moment().format(),
   },
   reminderId: {
+    type: String,
     required: true,
   }
 }, { versionKey: false });
