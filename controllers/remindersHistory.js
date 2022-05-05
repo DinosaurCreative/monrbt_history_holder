@@ -7,7 +7,7 @@ module.exports.getHistory = (req, res) => {
 }
 
 module.exports.postAction = (req, res) => {
-  const { actionType, reminderId } = req.query;
+  const rse = req.keys();
   RemindersHistory.create({
     actionType: 'pause',
     reminderId: 13,
