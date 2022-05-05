@@ -6,7 +6,7 @@ const {dataBaseAdress} = require('./utils/config');
 const { PORT = 3001 } = process.env;
 
 const app = express();
-app.use(cors());
+app.use(cors('*'));
 const router = require('./routes/remindersHistory');
 
 app.use(express.json());
