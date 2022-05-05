@@ -1,10 +1,8 @@
 const RemindersHistory = require('../models/remindersHistory');
 
 module.exports.getHistory = (req, res) => {
-  const { params, query, body, route } = req;
-  RemindersHistory.find({})
-    .then(() => Object.keys(req))
-    .then(rsp => res.send({reminderId: query.reminderId}))
+  RemindersHistory.find({reminderId: req.query.reminderId})
+    .then(history => res.send(history))
     .catch(() => res.status(500).send('Ошибка на серваке'))
 }
 
