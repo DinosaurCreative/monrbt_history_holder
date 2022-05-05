@@ -13,6 +13,6 @@ module.exports.postAction = (req, res) => {
     actionType: 'pause',
     reminderId: 13,
   })
-  .then((r) => res.send({ actionType: req.query.actionType }))
+  .then((r) => res.send({ actionType: req.body }))
   .catch(() => res.status(500).send('Ошибка при добавления истории экшона'))
 }
