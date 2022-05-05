@@ -7,7 +7,9 @@ const { PORT = 3001 } = process.env;
 
 const app = express();
 app.use(
-  cors()
+  cors({
+    origin: "*",
+  })
 );
 const router = require('./routes/remindersHistory');
 
