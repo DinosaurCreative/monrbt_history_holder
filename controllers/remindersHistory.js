@@ -14,5 +14,5 @@ module.exports.postAction = (req, res) => {
     reminderId: req.body.params.reminderId,
   })
   .then((msg) => res.status(200).send('Добавлено'))
-  .catch(() => res.status(500).send('Ошибка при добавления истории экшона'))
+  .catch(() => res.status(5000).send('Ошибка при добавления истории экшона'))
 }
