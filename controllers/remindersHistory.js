@@ -13,6 +13,9 @@ module.exports.postAction = (req, res) => {
     actionType: 'pause',
     reminderId: 13,
   })
-  .then((r) => res.send({ actionType: req.body.params }))
+  .then((r) => res.send({
+    actionType: req.body.params.actionType,
+    reminderId: req.body.params.reminderId
+  }))
   .catch(() => res.status(500).send('Ошибка при добавления истории экшона'))
 }
