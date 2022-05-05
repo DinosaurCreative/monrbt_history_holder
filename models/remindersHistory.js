@@ -8,7 +8,7 @@ const remindersHistorySchema = new mongoose.Schema({
   },
   addedAt: {
     type: String,
-    default: moment().format(),
+    required: true,
   },
   reminderId: {
     type: String,
