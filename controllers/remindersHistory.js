@@ -11,7 +11,8 @@ module.exports.postAction = (req, res) => {
   RemindersHistory.create({
     actionType: req.body.params.actionType,
     reminderId: req.body.params.reminderId,
-    addedAt: req.body.params.addedAt,
+    addedAtDay: req.body.params.addedAtDay,
+    addedAtTime: req.body.params.addedAtTime,
   })
   .then((msg) => res.status(200).send('Добавлено'))
   .catch(() => res.status(5000).send('Ошибка при добавления истории экшона'))

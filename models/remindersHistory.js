@@ -6,7 +6,11 @@ const remindersHistorySchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  addedAt: {
+  addedAtDay: {
+    type: String,
+    required: true,
+  },
+  addedAtTime: {
     type: String,
     required: true,
   },
