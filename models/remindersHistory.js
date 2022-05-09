@@ -18,14 +18,14 @@ const remindersHistorySchema = new mongoose.Schema({
     type: String,
     required: true,
   },
-  // previousChatName: {
-  //   type: String,
-  //   required: true,
-  // },
-  // currentChatName: {
-  //   type: String,
-  //   required: true,
-  // }
+  previousChatName: {
+    type: String,
+    required: true,
+  },
+  currentChatName: {
+    type: String,
+    required: true,
+  }
 }, { versionKey: false });
 
 module.exports = mongoose.model('remindersHistory', remindersHistorySchema);

@@ -12,8 +12,8 @@ module.exports.postAction = (req, res) => {
     reminderId: req.body.params.reminderId,
     addedAtDay: req.body.params.addedAtDay,
     addedAtTime: req.body.params.addedAtTime,
-    // currentChatName: req.body.params.currentChatName || ' ',
-    // previousChatName: req.body.params.previousChatName || ' ',
+    currentChatName: req.body.params.currentChatName || ' ',
+    previousChatName: req.body.params.previousChatName || ' ',
   })
   .then((msg) => res.status(200).send('Добавлено'))
   .catch(() => res.status(500).send('Ошибка при добавления истории экшона'))
