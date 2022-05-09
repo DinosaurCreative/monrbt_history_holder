@@ -8,8 +8,9 @@ module.exports.getHistory = (req, res) => {
 
 module.exports.postAction = (req, res) => {
   RemindersHistory.find({reminderId: req.query.params.reminderId})
-    .then(res => {
-      if(res.length < 1 ) {
+    .then(response => {
+
+      if(response.length < 1 ) {
         RemindersHistory.create([{
           actionType: 'Напоминание создано',
           addedAtDay: req.body.params.addedAtDay,
