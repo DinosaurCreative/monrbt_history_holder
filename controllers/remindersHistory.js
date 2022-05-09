@@ -1,3 +1,4 @@
+const { response } = require('express');
 const RemindersHistory = require('../models/remindersHistory');
 
 module.exports.getHistory = (req, res) => {
@@ -36,7 +37,7 @@ module.exports.postAction = (req, res) => {
         previousChatName: req.body.params.previousChatName || ' ',
       })
     })
-      .then((msg) => res.status(200).send('Добавлено'))
+      .then((msg) => res.status(200).send(response))
       .catch(() => res.status(500).send('Ошибка при добавления истории экшона'))
 }
 
