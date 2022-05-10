@@ -8,9 +8,8 @@ module.exports.getHistory = (req, res) => {
 }
 
 module.exports.postAction = (req, res) => {
-  RemindersHistory.find({reminderId: req.query.params.reminderId})
+  RemindersHistory.find({reminderId: req.body.params.reminderId})
     .then(response => {
-
       if(response.length < 1 ) {
         RemindersHistory.create([{
           actionType: 'Напоминание создано',
@@ -37,7 +36,7 @@ module.exports.postAction = (req, res) => {
         previousChatName: req.body.params.previousChatName || ' ',
       })
     })
-      .then((msg) => res.status(200).send(response))
+      .then(() => res.status(200).send(response))
       .catch(() => res.status(500).send('Ошибка при добавления истории экшона'))
 }
 
