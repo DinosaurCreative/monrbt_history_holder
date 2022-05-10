@@ -20,11 +20,9 @@ const remindersHistorySchema = new mongoose.Schema({
   },
   previousChatName: {
     type: String,
-    required: true,
   },
   currentChatName: {
     type: String,
-    required: true,
   }
 }, { versionKey: false });
 
